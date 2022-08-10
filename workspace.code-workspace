@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "login"
+		},
+		{
+			"path": "core_module"
+		},
+		{
+			"path": "dependency_module"
+		},
+		{
+			"path": "design_system"
+		}
+	],
+	"settings": {}
+}
