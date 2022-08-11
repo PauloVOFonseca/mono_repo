@@ -1,7 +1,6 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
-import 'package:login/app/sign_up_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
