@@ -1,7 +1,4 @@
 library dependency_module;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:url_launcher/url_launcher.dart';
+export 'package:dio/dio.dart';

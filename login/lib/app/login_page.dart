@@ -1,3 +1,4 @@
+import 'package:dependency_module/dependency_module.dart';
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   bool passwordLocker = true;
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
+  final Uri _url = Uri.parse('https://flutter.dev');
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,10 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Login', style: TextStyle(fontSize: 50)),
+            GestureDetector(
+              onTap: _launchUrl,
+              child: const Text('Login', style: TextStyle(fontSize: 50)),
+            ),
             CustomTextField(
               controller: _emailTextController,
               hintText: 'email',
@@ -62,5 +67,11 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
+    }
   }
 }
