@@ -18,9 +18,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Test login page'),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         child: Column(
@@ -49,6 +46,14 @@ class _LoginPageState extends State<LoginPage> {
                   passwordLocker = !passwordLocker;
                 });
               },
+            ),
+            const SizedBox(height: 16),
+            Align(
+              alignment: Alignment.centerRight,
+              child: ForgotPasswordButton(
+                text: 'Esqueceu sua senha?',
+                onTap: () => print('Esqueceu a senha'),
+              ),
             ),
             const SizedBox(height: 40),
             CustomSubmitButton(
