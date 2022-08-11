@@ -1,6 +1,7 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
+import 'package:login/app/sign_up_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -67,6 +68,17 @@ class _LoginPageState extends State<LoginPage> {
               boxBorder: Border.all(color: Colors.purpleAccent),
               borderRadiusGeometry:
                   const BorderRadius.all(Radius.circular(5.0)),
+            ),
+            const SizedBox(height: 16),
+            Align(
+              alignment: Alignment.center,
+              child: SignUpButton(
+                text: 'Não tem cadastro? ',
+                textStyle: TextStyle(color: Colors.red),
+                textToClick: 'Registre-se',
+                textStyleToClick: TextStyle(color: Colors.black),
+                onTap: () => print('registre-se'),
+              ),
             ),
           ],
         ),
